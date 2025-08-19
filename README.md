@@ -31,6 +31,7 @@ cp .env.sample .env
 - Choose `TTS_PROVIDER=openai`, `elevenlabs`, or `speechify`.
 - For OpenAI TTS, set `OPENAI_TTS_VOICE_MODEL` (e.g., `gpt-4o-mini-tts`) and `OPENAI_TTS_VOICE` (e.g., `alloy`).
 - For ElevenLabs, set `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID`.
+- For Speechify, set `SPEECHIFY_API_KEY`, `SPEECHIFY_VOICE_ID`, `SPEECHIFY_MODEL` (e.g., `simba-english`), and `SPEECHIFY_LANGUAGE` (e.g., `en-US`).
 
 _(Tip: You can also drop your own intro music in `assets/intro_music.mp3`.)_
 
