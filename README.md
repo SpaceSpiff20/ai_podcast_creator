@@ -6,7 +6,7 @@ Generate a full podcast episode from a topic **using AI for script + AI voice** 
 
 - `src/generate_podcast.py` — one-command pipeline
 - AI script generation (OpenAI)
-- AI voice TTS (OpenAI or ElevenLabs)
+- AI voice TTS (OpenAI, ElevenLabs, or Speechify)
 - Simple audio polishing & intro/outro
 - Episode notes + RSS feed
 - Outputs in `out/`
@@ -28,7 +28,7 @@ cp .env.sample .env
 ```
 
 - `OPENAI_API_KEY` — required for script generation and OpenAI TTS.
-- Choose `TTS_PROVIDER=openai` or `elevenlabs`.
+- Choose `TTS_PROVIDER=openai`, `elevenlabs`, or `speechify`.
 - For OpenAI TTS, set `OPENAI_TTS_VOICE_MODEL` (e.g., `gpt-4o-mini-tts`) and `OPENAI_TTS_VOICE` (e.g., `alloy`).
 - For ElevenLabs, set `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID`.
 
@@ -63,7 +63,7 @@ Outputs:
 ## 3) How it works
 
 1. **Script** — Prompts GPT to write a narrative of target duration with a hook, segments, and CTA.
-2. **TTS** — Converts the script to voice (OpenAI or ElevenLabs).
+2. **TTS** — Converts the script to voice (OpenAI, ElevenLabs, or Speechify).
 3. **Polish** — Adds intro/outro stings, normalizes loudness, and exports MP3.
 4. **Notes/RSS** — Generates show notes and updates `podcast.rss` with an `<item>`.
 
